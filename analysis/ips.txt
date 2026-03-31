@@ -1,0 +1,9 @@
+2026-03-24T16:02:34.650738Z [-] Ready to accept SSH connections
+2026-03-24T16:09:51.219384Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 49.42.178.99:65076 (172.31.36.152:2222) [session: 4b07369986b2]
+2026-03-24T16:11:07.282122Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2026-03-24T16:11:07.483741Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2026-03-24T16:11:07.484135Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2026-03-24T16:11:07.705392Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,49.42.178.99] Terminal Size: 156 44
+2026-03-24T16:14:07.787068Z [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2026-03-24T16:14:07.787575Z [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2026-03-24T16:14:08.037719Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
